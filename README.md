@@ -1,4 +1,4 @@
-# 📚 Persian Information Retrieval System -- Hamshahri Corpus
+# 📚 Persian Information Retrieval System - Hamshahri Corpus
 
 This project implements a complete **Information Retrieval (IR) system**
 for ranking Persian documents using the **Hamshahri Corpus**.
@@ -45,7 +45,7 @@ performance using official relevance judgments.
 
 **Hamshahri Corpus**
 
--   Persian news collection (2003--2007)
+-   Persian news collection (2003-2007)
 -   Large-scale benchmark dataset for Persian IR research
 -   Includes:
     -   50 evaluation queries
@@ -62,13 +62,13 @@ character encodings
 A robust preprocessing pipeline was implemented to improve retrieval
 effectiveness:
 
--   Persian character normalization\
--   Removal of punctuation and unwanted symbols\
--   Removal of English characters\
--   Tokenization\
--   Stopword removal\
--   Term cleaning\
--   Alphabetical sorting of terms\
+-   Persian character normalization
+-   Removal of punctuation and unwanted symbols
+-   Removal of English characters
+-   Tokenization
+-   Stopword removal
+-   Term cleaning
+-   Alphabetical sorting of terms
 -   Creation of unique term lists
 
 This ensures high-quality indexing and reduces noise in ranking.
@@ -107,25 +107,25 @@ Four ranking models were implemented as independent modules:
 
 ### 🔹 1. Okapi BM25
 
--   Probabilistic ranking model\
--   Handles term frequency saturation\
+-   Probabilistic ranking model
+-   Handles term frequency saturation
 -   Includes document length normalization
 
 ### 🔹 2. Language Model (LM)
 
--   Query likelihood approach\
--   Uses smoothing (Dirichlet or Jelinek--Mercer)\
+-   Query likelihood approach
+-   Uses smoothing (Dirichlet or Jelinek--Mercer)
 -   Addresses zero-probability issues
 
 ### 🔹 3. Vector Space Model (VSM)
 
--   TF-IDF weighting\
--   Cosine similarity\
+-   TF-IDF weighting
+-   Cosine similarity
 -   Classic geometric interpretation
 
 ### 🔹 4. Hybrid Model
 
--   Weighted score fusion of BM25, LM, and VSM\
+-   Weighted score fusion of BM25, LM, and VSM
 -   Improves robustness across query types
 
 ------------------------------------------------------------------------
@@ -138,8 +138,8 @@ RelativeAssessment/judgements.txt
 
 For each query:
 
--   Let n = number of relevant documents\
--   Retrieve top n × α documents\
+-   Let n = number of relevant documents
+-   Retrieve top n × α documents
 -   α sampled at 20 values in range:
 
 1 ≤ α ≤ 10
@@ -150,8 +150,8 @@ For each query:
 
 For each model and each α:
 
--   Precision\
--   Recall\
+-   Precision
+-   Recall
 -   F1-score
 
 Metrics were averaged across all 50 queries.
@@ -162,9 +162,9 @@ Metrics were averaged across all 50 queries.
 
 Performance curves were plotted showing:
 
--   Precision vs α\
--   Recall vs α\
--   F1-score vs α\
+-   Precision vs α
+-   Recall vs α
+-   F1-score vs α
 -   All four models compared together
 
 This enables clear comparison of trade-offs and model behavior.
@@ -176,20 +176,20 @@ This enables clear comparison of trade-offs and model behavior.
 
 Demonstrates:
 
--   End-to-end IR implementation\
--   Large-scale indexing\
--   Probabilistic & vector ranking\
+-   End-to-end IR implementation
+-   Large-scale indexing
+-   Probabilistic & vector ranking
 -   Evaluation under varying retrieval thresholds
 
 ------------------------------------------------------------------------
 
 ## 🚀 Skills Demonstrated
 
--   Persian text preprocessing\
--   Inverted indexing\
--   TF-IDF modeling\
--   BM25 implementation\
--   Language modeling with smoothing\
--   Hybrid ranking systems\
--   Retrieval evaluation metrics\
+-   Persian text preprocessing
+-   Inverted indexing
+-   TF-IDF modeling
+-   BM25 implementation
+-   Language modeling with smoothing
+-   Hybrid ranking systems
+-   Retrieval evaluation metrics
 -   Experimental analysis
